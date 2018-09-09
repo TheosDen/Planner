@@ -16,7 +16,7 @@ const { Content } = Layout;
 class App extends React.Component {
     render() {
         return (
-            <Layout className="layout">
+            <Layout className="layout" style={{height:"100vh"}}>
                 <Content>
                     <div>Content</div>
                 </Content>

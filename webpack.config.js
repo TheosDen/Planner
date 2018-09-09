@@ -44,7 +44,17 @@ Encore
     // uncomment if you're having problems with a jQuery plugin
     //.autoProvidejQuery()
 
-    .enableReactPreset();
+    .enableReactPreset()
+
+    .configureBabel(function(babelConfig) {
+        // add additional presets
+
+        babelConfig.plugins.push(["import", {
+            "libraryName": "antd",
+            "style": "css"
+        }
+        ]);
+    })
 ;
 
 module.exports = Encore.getWebpackConfig();
