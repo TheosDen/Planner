@@ -2,7 +2,16 @@
 
 {% block title %}Planner{% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('build/app.css') }}">
+{% endblock %}
+
 {% block body %}
-    <div class="app"></div>
-    <script type="text/javascript" src="{{ asset('build/app.js') }}"></script>
+    <div id="root"></div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('build/app.js') }}"></script>
 {% endblock %}
